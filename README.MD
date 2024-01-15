@@ -23,5 +23,27 @@ Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga a
 * Instale as dependências: pip install -r requirements.txt 
 * Execute a aplicação: python app.py
 
+## Ambiente Virtual
+
+Se você está utilizando ambientes virtuais para isolar as dependências, você pode incluir uma seção sobre como criar e ativar o ambiente virtual:
+
+```markdown
+## Ambiente Virtual
+
+Crie um ambiente virtual para isolar as dependências do projeto. Execute os seguintes comandos:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux
+.\venv\Scripts\activate  # Windows
+
+## Executando com Docker
+
+Certifique-se de ter o Docker instalado. Em seguida, execute os seguintes comandos:
+
+```bash
+docker build -t vpn-generator-webpy .
+docker run -p 5000:5000 vpn-generator-webpy
+
 # Licença
 Este projeto é licenciado sob a Licença MIT.
