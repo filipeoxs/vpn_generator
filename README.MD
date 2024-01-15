@@ -10,7 +10,10 @@ Oferece a capacidade de verificar a validade de uma VPN fornecendo o nome do usu
 # Download de VPN: 
 Possibilita o download de VPNs existentes, exigindo apenas a identificação do usuário.
 # Tecnologias Utilizadas
-* Flask: Framework web leve e flexível em Python. * Bootstrap: Framework front-end para uma interface responsiva e agradável. * LDAP3: Biblioteca Python para interação com servidores LDAP, utilizada para autenticação e busca de usuários no Active Directory.
+* Flask: Framework web leve e flexível em Python. 
+* Bootstrap: Framework front-end para uma interface responsiva e agradável. 
+* LDAP3: Biblioteca Python para interação com servidores LDAP, utilizada para autenticação e busca de usuários no Active Directory.
+
 # Como Contribuir
 Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga as diretrizes de contribuição e envie suas solicitações de pull.
 
