@@ -18,7 +18,9 @@ Possibilita o download de VPNs existentes, exigindo apenas a identificação do 
 Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga as diretrizes de contribuição e envie suas solicitações de pull.
 
 # Instalação Local
-* Clone o repositório: git clone https://github.com/seu-usuario/seu-repositorio.git * Instale as dependências: pip install -r requirements.txt * Execute a aplicação: python app.py
+* Clone o repositório: git clone https://github.com/seu-usuario/seu-repositorio.git 
+* Instale as dependências: pip install -r requirements.txt 
+* Execute a aplicação: python app.py
 
 # Licença
 Este projeto é licenciado sob a Licença MIT.
