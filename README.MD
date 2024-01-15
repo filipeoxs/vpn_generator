@@ -25,8 +25,6 @@ Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga a
 
 ## Ambiente Virtual
 
-Se você está utilizando ambientes virtuais para isolar as dependências, você pode incluir uma seção sobre como criar e ativar o ambiente virtual:
-
 ```markdown
 ## Ambiente Virtual
 
