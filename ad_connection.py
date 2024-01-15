@@ -51,5 +51,3 @@ def start_search(usuario_localizar_ad):
     display_name_to_search = usuario_localizar_ad  # Substitua com o nome completo do usuário que você deseja pesquisar
     result = ad_instance.search_user_samaccountname(display_name_to_search)
     print(result)
-
-x = start_search()
