@@ -15,6 +15,8 @@ class AD:
                 # Define the username and password
                 username = configs[0]
                 password = configs[1]
+                print(username)
+                print(password)
                 # Make connection with the server
                 server = Server('ldap://10.1.1.19', get_info=ALL)
                 self.conn = Connection(server, user=username, password=password)
@@ -23,6 +25,7 @@ class AD:
                     logging.error(f'Erro de autenticação: {self.conn.result}')
                     self.conn = None
                     time.sleep(5)
+                    return False
                 else:
                     return True
             return True

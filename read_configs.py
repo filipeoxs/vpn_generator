@@ -6,11 +6,12 @@ def read_configs():
     config = configparser.ConfigParser()
 
     # Read the .ini file
-    config.read('config.ini')
+    config.read('config_dev.ini')
 
     # Access the values using the appropriate section and key
     username = config.get('Credentials', 'username')
     password = config.get('Credentials', 'password')
-    
+    url_bsb = config.get('vpn', 'url_bsb')
+    url_rj = config.get('vpn', 'url_rj')
 
-    return username,password
+    return username,password, url_bsb, url_rj
