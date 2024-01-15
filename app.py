@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Main route for the app
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def index():
     resultado_busca = ""
     if request.method == 'POST':
         # Pull the data from the html
