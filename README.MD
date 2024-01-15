@@ -27,7 +27,7 @@ Possibilita o download de VPNs existentes, exigindo apenas a identificação do 
 
 Crie um ambiente virtual para isolar as dependências do projeto. Execute os seguintes comandos:
 
-```bash
+bash
 python -m venv venv
 source venv/bin/activate  # Linux
 .\venv\Scripts\activate  # Windows
@@ -40,8 +40,4 @@ Certifique-se de ter o Docker instalado. Em seguida, execute os seguintes comand
 docker build -t vpn-generator-webpy .
 docker run -p 5000:5000 vpn-generator-webpy
 
-# Como Contribuir
-Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga as diretrizes de contribuição e envie suas solicitações de pull.
 
-# Licença
-Este projeto é licenciado sob a Licença MIT.
