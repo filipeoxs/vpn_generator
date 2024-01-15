@@ -1,6 +1,6 @@
 
 
-# O VPN Generator WebPy é uma aplicação web construída em Flask, Bootstrap e LDAP para simplificar a criação e gerenciamento de conexões VPN. Este projeto oferece uma interface intuitiva para os usuários gerarem, consultar a validade e realizar o download de VPNs de maneira fácil e segura.
+O VPN Generator WebPy é uma aplicação web construída em Flask, Bootstrap e LDAP para simplificar a criação e gerenciamento de conexões VPN. Este projeto oferece uma interface intuitiva para os usuários gerarem, consultar a validade e realizar o download de VPNs de maneira fácil e segura.
 
 # Recursos Principais
 # Geração de VPN: 
