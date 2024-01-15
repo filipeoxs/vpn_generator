@@ -15,9 +15,6 @@ Possibilita o download de VPNs existentes, exigindo apenas a identificação do 
 * LDAP3: Biblioteca Python para interação com servidores LDAP, utilizada para autenticação e busca de usuários no Active Directory.
 * Selenium: Ferramenta de automação para testes web e scraping, integrada para realizar tarefas específicas.
 
-# Como Contribuir
-Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga as diretrizes de contribuição e envie suas solicitações de pull.
-
 # Instalação Local
 * Clone o repositório: git clone https://github.com/filipeoxs/vpn_generato.git 
 * Instale as dependências: pip install -r requirements.txt 
@@ -42,6 +39,9 @@ Certifique-se de ter o Docker instalado. Em seguida, execute os seguintes comand
 ```bash
 docker build -t vpn-generator-webpy .
 docker run -p 5000:5000 vpn-generator-webpy
+
+# Como Contribuir
+Fique à vontade para contribuir, relatar problemas ou sugerir melhorias! Siga as diretrizes de contribuição e envie suas solicitações de pull.
 
 # Licença
 Este projeto é licenciado sob a Licença MIT.
