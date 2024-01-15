@@ -36,7 +36,6 @@ source venv/bin/activate  # Linux
 
 Certifique-se de ter o Docker instalado. Em seguida, execute os seguintes comandos:
 
-```bash
 docker build -t vpn-generator-webpy .
 docker run -p 5000:5000 vpn-generator-webpy
 
