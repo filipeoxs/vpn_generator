@@ -161,4 +161,4 @@ cython_debug/
 
 
 STEPS_TO_DO.MD
-config_prod.ini
+config_dev.ini
