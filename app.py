@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from ad_connection import start_search
+import os
 app = Flask(__name__)
 
 # Main route for the app
@@ -13,13 +14,18 @@ def index():
         # Verify on AD
         resultado_busca = start_search(nome_usuario)
         
-        print (nome_usuario)
-        
-        # Send the data to front end
-        context = {'resultado_busca': resultado_busca}
-        return render_template('index.html', context=context)
+        if resultado_busca == nome_usuario:
+            # Send the data to front end
+            # Return the file of vpn
+            file_vpn = 'Usuário encontrado'
+            vpn = {'resultado_busca': file_vpn}
+            return render_template('index.html', context=vpn)
+        else:
+            # Send error to html
+            return render_template('index.html', context=resultado_busca)
 
     return render_template('index.html', context=resultado_busca)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='10.2.3.1', port=port)

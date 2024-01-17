@@ -15,8 +15,6 @@ class AD:
                 # Define the username and password
                 username = configs[0]
                 password = configs[1]
-                print(username)
-                print(password)
                 # Make connection with the server
                 server = Server('ldap://10.1.1.19', get_info=ALL)
                 self.conn = Connection(server, user=username, password=password)
@@ -44,7 +42,9 @@ class AD:
             if not entries:
                 return 'Usuário não encontrado no AD'
             else:
-                return True
+               # Acessa diretamente o valor do atributo sAMAccountName da primeira entrada
+                sAMAccountName = entries[0]['sAMAccountName'].value
+                return sAMAccountName
         else:
             return False
 
@@ -53,4 +53,4 @@ def start_search(usuario_localizar_ad):
     ad_instance = AD()
     display_name_to_search = usuario_localizar_ad  # Substitua com o nome completo do usuário que você deseja pesquisar
     result = ad_instance.search_user_samaccountname(display_name_to_search)
-    print(result)
+    return result
