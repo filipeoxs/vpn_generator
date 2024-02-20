@@ -16,7 +16,7 @@ class AD:
                 username = configs[0]
                 password = configs[1]
                 # Make connection with the server
-                server = Server('ldap://10.1.1.19', get_info=ALL)
+                server = Server(configs[7], get_info=ALL)
                 self.conn = Connection(server, user=username, password=password)
                # If the username or the password does not match
                 if not self.conn.bind():
@@ -36,7 +36,7 @@ class AD:
     # Search for the user on AD to compare the user from ad and the user that was collected from frontend
     def search_user_samaccountname(self, display_name):
         if self.connect():
-            self.conn.search('dc=ipea,dc=gov,dc=br', f'(sAMAccountName={display_name})', attributes=['sAMAccountName'])
+            self.conn.search("dc=ipea,dc=gov,dc=br", f'(sAMAccountName={display_name})', attributes=['sAMAccountName'])
             entries = self.conn.entries
 
             if not entries:

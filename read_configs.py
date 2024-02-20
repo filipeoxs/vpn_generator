@@ -16,5 +16,8 @@ def read_configs():
     url_cloud = config.get('cloud','url_cloud')
     username_cloud = config.get('cloud','username')
     password_cloud = config.get('cloud','password')
-
-    return username,password, url_bsb, url_rj, url_cloud, username_cloud, password_cloud
+    server_ad = config.get('AD','server')
+    vpn_user = config.get('vpn', 'username')
+    vpn_password = config.get('vpn', 'password')
+    
+    return username,password, url_bsb, url_rj, url_cloud, username_cloud, password_cloud, server_ad, vpn_password, vpn_user

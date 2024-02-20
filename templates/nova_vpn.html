@@ -1,0 +1,59 @@
+<!-- Modal para gerar uma nova VPN -->
+<div class="modal fade" id="gerarvpn" tabindex="-1" aria-labelledby="gerarvpn" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gerarvpn">Gerar VPN</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário para criar um novo certificado -->
+                <form method="POST" action="{{ url_for('index') }}">
+                    <div class="mb-3">
+                        <!-- Nome do usuário como: b003215... -->
+                        <label for="nome_usuario" class="form-label">Usuário</label>
+                        <input type="text" class="form-control" id="nome_usuario" aria-describedby="nome_usuario" name="nome_usuario">
+                    </div>
+                    <!-- Formulário de verificação para o sistema -->
+                    <div class="container">
+                        <div class="form-check-inline">
+                            <!-- Windows -->
+                            <input class="form-check-inline-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-inline-label" for="flexCheckDefault">
+                                Windows
+                            </label>
+                        </div>
+                        <!-- MacOs -->
+                        <div class="form-check-inline">
+                            <!-- MacOs -->
+                            <input class="form-check-inline-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-inline-label" for="flexCheckDefault">
+                                Mac Os
+                            </label>
+                        </div>
+                        <!-- Android -->
+                        <div class="form-check-inline">
+                            <!-- Android -->
+                            <input class="form-check-inline-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-inline-label" for="flexCheckDefault">
+                                Android
+                            </label>
+                        </div>
+                        <!-- Linux -->
+                        <div class="form-check-inline">
+                            <!-- Linux -->
+                            <input class="form-check-inline-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-inline-label" for="flexCheckDefault">
+                                Linux
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Criar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

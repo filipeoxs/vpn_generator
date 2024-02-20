@@ -1,0 +1,7 @@
+<!--Alet Message if user does not exist on AD-->
+{% if error_msg %}
+<div class="alert alert-danger" role="alert">
+  {{error_msg}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}

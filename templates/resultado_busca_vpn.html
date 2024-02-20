@@ -1,0 +1,20 @@
+{% if 'resultado_busca' in context %}
+<!-- Campos de data, inicialmente ocultos -->
+<div id="resultados" class="d-flex justify-content-center align-items-center vh-100">
+      <div class="card text-center;" style="width: 50%;">
+          <!-- Usuário -->
+          <label for="usuario" class="form-label">Usuário</label>
+          <input type="text" class="form-control" id="usuario" readonly value="{{ context['resultado_busca'][0] }}">
+      
+          <!-- Data de criação -->
+          <label for="data_criacao" class="form-label">Data de Criação</label>
+          <input type="text" class="form-control" id="data_criacao" readonly value="{{ context['resultado_busca'][1] }}">
+      
+          <!-- Data de validade -->
+          <label for="data_validade" class="form-label">Data de Validade</label>
+          <input type="text" class="form-control" id="data_validade" readonly value="{{ context['resultado_busca'][2] }}">
+      
+          <button type="button" class="btn btn-secondary" id="fecharModal">Fechar</button>
+      </div>
+  {% endif %}
+</div>

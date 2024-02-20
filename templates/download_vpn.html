@@ -1,0 +1,25 @@
+<!-- Modal para download de um certificado -->
+<div class="modal fade" id="downloadvpn" tabindex="-1" aria-labelledby="downloadvpn" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadvpn">Download VPN</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário -->
+                <form method="POST" action="{{ url_for('download_certificado') }}">
+                    <div class="mb-3">
+                        <!-- Nome do usuário -->
+                        <label for="nome_usuario" class="form-label">Nome do Usuário</label>
+                        <input type="text" class="form-control" id="nome_usuario" aria-describedby="nome_usuario" name="nome_usuario">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Download</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
