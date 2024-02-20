@@ -33,7 +33,7 @@ element_input_password = driver.find_element(By.NAME, 'password').send_keys(pass
 driver.find_element(By.ID,'submit').click()
 
 # Navigate to a specific folder in the cloud
-driver.get('https://nuvem.ipea.gov.br/index.php/apps/files/?dir=/VPN%20usu%C3%A1rios%20IPEA&fileid=2606571')
+
 time.sleep(2)
 
 # Create a new folder by clicking on the 'New' button
