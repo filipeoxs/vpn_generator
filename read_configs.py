@@ -19,5 +19,7 @@ def read_configs():
     server_ad = config.get('AD','server')
     vpn_user = config.get('vpn', 'username')
     vpn_password = config.get('vpn', 'password')
+    url_cert_manager = config.get('vpn','url_cert_manager')
+    url_cert_export = config.get('vpn','url_cert_export')
     
-    return username,password, url_bsb, url_rj, url_cloud, username_cloud, password_cloud, server_ad, vpn_password, vpn_user
+    return username,password, url_bsb, url_rj, url_cloud, username_cloud, password_cloud, server_ad, vpn_password, vpn_user, url_cert_manager, url_cert_export

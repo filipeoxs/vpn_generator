@@ -34,7 +34,7 @@ def login():
 def search_certificate(username):
     try:
         driver = login()
-        driver.get('https://vpn1.ipea.gov.br/system_certmanager.php')
+        driver.get(urls[10])
         nome_elemento = driver.find_element(By.XPATH, "//*[@id='3']/div/div[3]/div[2]/div/table/tbody")
         trs = nome_elemento.find_elements(By.TAG_NAME, 'tr')
 
@@ -67,7 +67,7 @@ def search_certificate(username):
 def download_vpn(username):
     try:
         driver = login()
-        driver.get('https://vpn1.ipea.gov.br/vpn_openvpn_export.php')
+        driver.get(urls[11])
         # Localizar o elemento pelo nome "server"
         select_element = driver.find_element(By.NAME, "server")
 
@@ -78,17 +78,14 @@ def download_vpn(username):
         select.select_by_value("4")  # Isso seleciona a opção com o valor "OpenVPN Acesso Usuario UDP4:1197"
         nome_elemento = driver.find_element(By.XPATH, "//*[@id='users']")
         trs = nome_elemento.find_elements(By.TAG_NAME, 'tr')
-        
-        # Usuário específico que você está procurando
-        usuario_especifico = "t05613226199"  # Substitua pelo usuário desejado
 
         for tr in trs:
             username_info = " ".join(line.strip() for line in tr.text.splitlines() if line.strip())
             username_cert_name = username_info.split(' Certificate with External Auth')[0].strip()
 
             # Verificar se o usuário específico está presente na linha
-            if usuario_especifico in username_cert_name:
-                print(f"Usuário {usuario_especifico} encontrado na linha:")
+            if username in username_cert_name:
+                print(f"Usuário {username} encontrado na linha:")
                 print(username_info)
                 print('\n')
 
